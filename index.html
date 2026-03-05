@@ -467,6 +467,45 @@ body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-
   backdrop-filter: blur(4px);
 }
 .lightbox-close:hover { background: rgba(255,255,255,0.3); }
+
+/* RESOURCE NAV BAR */
+.resource-nav {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.resource-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text-secondary);
+  background: var(--green-pale);
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+.resource-nav a:hover {
+  background: var(--green-dark);
+  color: white;
+  border-color: var(--green-dark);
+}
+.resource-nav a.active {
+  background: var(--green-dark);
+  color: white;
+}
+.resource-nav a .nav-icon { font-size: 14px; }
 </style>
 </head>
 <body>
@@ -480,6 +519,15 @@ body { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-
   <div class="page-title">Wakefield, MA — Satellite Lead Targets</div>
   <div class="page-subtitle">Sentinel-2 NDVI Change Detection · Sept 2023 → Aug 2025</div>
 </div>
+
+<!-- RESOURCE NAVIGATION -->
+<nav class="resource-nav">
+  <a href="index.html" class="active"><span class="nav-icon">🛰️</span> Lead Dashboard</a>
+  <a href="savatree-canopy-lead-gen-feasibility.html"><span class="nav-icon">📊</span> Feasibility Study</a>
+  <a href="savatree-isa-digital-assessment.html"><span class="nav-icon">🌳</span> ISA Assessment Tool</a>
+  <a href="savatree-lead-qualification-framework.html"><span class="nav-icon">🎯</span> Lead Qualification</a>
+  <a href="ISA-Basic-Tree-Risk-Form-fillable.pdf" target="_blank"><span class="nav-icon">📋</span> ISA Risk Form (PDF)</a>
+</nav>
 
 <!-- STATS -->
 <div class="stats-row">
